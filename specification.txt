@@ -1304,9 +1304,10 @@ substituted by the "editor" name variable, or, when no editors exist, by the
 Label in ``cs:names``
 ^^^^^^^^^^^^^^^^^^^^^
 
-The optional ``cs:label`` element (see `label`_) must be included after the
-``cs:name`` and ``cs:et-al`` elements, but before the ``cs:substitute`` element.
-When used as a child element of ``cs:names``, ``cs:label`` does not carry the
+The optional ``cs:label`` element (see `label`_) must occur either before or after the
+``cs:name`` and ``cs:et-al`` elements. The occurence of ``cs:label`` before or after ``cs:name`` 
+determines the order in which those elements are displayed. The ``cs:label`` element must occur before 
+the ``cs:substitute`` element. When used as a child element of ``cs:names``, ``cs:label`` does not carry the
 ``variable`` attribute; it uses the variable(s) set on the parent ``cs:names``
 element instead. A second difference is that the ``form`` attribute may also be
 set to "verb" or "verb-short", so that the allowed values are:
